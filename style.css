@@ -442,3 +442,27 @@ a {
   justify-content: center;
   gap: 10px;
 }
+
+.portfolio-img {
+  width: 100px;
+}
+
+.header-center-align {
+  text-align: center;
+}
+
+.skills-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.hobbies-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
