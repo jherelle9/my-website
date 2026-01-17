@@ -1,0 +1,170 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* COLORS */
+:root {
+  --red: #8b1e1e;
+  --dark-red: #5c1212;
+  --cream: #f5f1e8;
+  --yellow: #f3d24f;
+  --white: #ffffff;
+  --gold-base: #d4af37;
+  --gold-dark: #b8860b;
+  --dark-gray: #2b2b2b;
+}
+
+/* BODY OUTER RED BACKGROUND */
+body {
+  font-family: "Goudy Bookletter 1911", serif;
+  color: var(--cream);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--red); /* plain red outer background */
+}
+
+/* FANCY FRAME WRAPPER */
+.frame-wrapper {
+  width: 90%;
+  max-width: 1200px;
+  padding: 40px;
+
+  /* Dark gray inside */
+  background-color: var(--dark-gray);
+
+  /* Gold picture frame with bevel effect */
+  border: 20px solid var(--gold-base);
+  /* border: 20px solid #d4af37;  */
+
+  border-radius: 40px; /* rounded corners */
+  position: relative;
+
+  box-shadow:
+    0 0 0 5px #f3d24f,
+    /* inner gold highlight */ 0 0 15px 8px #b8860b,
+    /* outer depth shadow */ inset 0 0 10px rgba(255, 215, 0, 0.3); /* inner glow */
+}
+
+/* DECORATIVE CORNERS */
+.frame-wrapper::before,
+.frame-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 4px solid var(--gold-base);
+  border-radius: 50%;
+  z-index: 2;
+  background-color: transparent;
+}
+
+/* Top-left corner decoration */
+.frame-wrapper::before {
+  top: -30px;
+  left: -30px;
+  border-right: none;
+  border-bottom: none;
+}
+
+/* Bottom-right corner decoration */
+.frame-wrapper::after {
+  bottom: -30px;
+  right: -30px;
+  border-left: none;
+  border-top: none;
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+/* LOGO */
+.logo {
+  font-family: "Rye", cursive;
+  font-size: 32px;
+  color: var(--yellow);
+}
+
+/* NAV TABS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  font-family: "Rye", cursive;
+  font-size: 16px;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.nav-links li:hover {
+  color: var(--yellow);
+  transform: translateY(-3px);
+  text-shadow: 0 0 6px rgba(243, 210, 79, 0.6);
+}
+
+/* MAIN LAYOUT */
+.container {
+  display: flex;
+  align-items: flex-start; /* top-aligned image/text */
+  gap: 120px;
+}
+
+/* PROFILE IMAGE */
+.avatar {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid var(--gold-base);
+  margin-left: -20px;
+}
+
+/* INFO BOX */
+.info-box {
+  text-align: left;
+}
+
+.info-box h1 {
+  font-family: "Rye", cursive;
+  font-size: 46px;
+  letter-spacing: 2px;
+  color: var(--yellow);
+  margin-bottom: 20px;
+}
+
+.info-box p {
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+
+/* BUTTON */
+button {
+  margin-top: 25px;
+  padding: 14px 36px;
+  border: 2px solid var(--gold-base);
+  background: transparent;
+  color: var(--gold-base);
+  font-family: "Goudy Bookletter 1911", serif;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--gold-base);
+  color: var(--red);
+}
