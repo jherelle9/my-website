@@ -15,10 +15,15 @@
   <body>
     <div class="header">
       <div class="row">
-        <div class="col-6">
-          <img src="logo.png" alt="logo" height="60px" />
+        <div class="col-12 col-md-3 col-lg-2">
+          <img
+            src="logo.png"
+            alt="logo"
+            height="60px"
+            style="display: block; margin: 0 auto"
+          />
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-9 col-lg-10">
           <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="education.html">Education</a></li>
@@ -31,19 +36,33 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-12">
-        <h1 class="header-center-align">This is my portfolio</h1>
+    <div class="container portfolio-container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="header-center-align">My Portfolio</h1>
+        </div>
       </div>
-      <div class="col-4">
-        <img class="portfolio-img" src="picture.jpg" alt="" />
-      </div>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="portfolio-item">
+            <img class="portfolio-img" src="picture.jpg" alt="Project 1" />
+            <h3 style="margin-top: 1rem">Project 1</h3>
+          </div>
+        </div>
 
-      <div class="col-4">
-        <img class="portfolio-img" src="picture.jpg" alt="" />
-      </div>
-      <div class="col-4">
-        <img class="portfolio-img" src="picture.jpg" alt="" />
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="portfolio-item">
+            <img class="portfolio-img" src="picture.jpg" alt="Project 2" />
+            <h3 style="margin-top: 1rem">Project 2</h3>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="portfolio-item">
+            <img class="portfolio-img" src="picture.jpg" alt="Project 3" />
+            <h3 style="margin-top: 1rem">Project 3</h3>
+          </div>
+        </div>
       </div>
     </div>
   </body>
